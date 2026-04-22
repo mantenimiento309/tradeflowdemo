@@ -1,0 +1,254 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+Instale la versión más reciente de PowerShell para obtener nuevas características y mejoras. https://aka.ms/PSWindows
+PS C:\Users\USER> pwd
+Path
+C:\Users\USER
+Directorio: C:\Users\USER
+Directorio: C:\Users\USER
+00000000001.regtrans-ms
+00000000002.regtrans-ms
+PS C:\Users\USER> Get-ChildItem
+Directorio: C:\Users\USER
+PS C:\Users\USER> cd Desktop
+PS C:\Users\USER\Desktop> pwd
+Path
+C:\Users\USER\Desktop
+Directorio: C:\Users\USER\Desktop
+acker-angle-triangle.png
+chnical-angle-text.png
+PS C:\Users\USER\Desktop> cd ..
+PS C:\Users\USER> mkdir devops-practice
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice.
+En línea: 1 Carácter: 1
++ mkdir devops-practice
++ ~~~~~~~~~~~~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\devops-practice:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER> cd devops-practice
+PS C:\Users\USER\devops-practice>
+PS C:\Users\USER\devops-practice> mkdir semana1-linux
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice\semana1-linux.
+En línea: 1 Carácter: 1
++ mkdir semana1-linux
++ ~~~~~~~~~~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\d...e\semana1-linux:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER\devops-practice> mkdir semana2-docker
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice\semana2-docker.
+En línea: 1 Carácter: 1
++ mkdir semana2-docker
++ ~~~~~~~~~~~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\d...\semana2-docker:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER\devops-practice> mkdir semana3-cicd
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice\semana3-cicd.
+En línea: 1 Carácter: 1
++ mkdir semana3-cicd
++ ~~~~~~~~~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\d...ce\semana3-cicd:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER\devops-practice> mkdir firewall
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice\firewall.
+En línea: 1 Carácter: 1
++ mkdir firewall
++ ~~~~~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\devops-practice\firewall:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER\devops-practice> mkdir logs
+mkdir : Ya existe un elemento con el nombre especificado: C:\Users\USER\devops-practice\logs.
+En línea: 1 Carácter: 1
++ mkdir logs
++ ~~~~~~~~~~
+: ResourceExists: (C:\Users\USER\devops-practice\logs:String) [New-Item], IOException
++ FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+PS C:\Users\USER\devops-practice>
+Directorio: C:\Users\USER\devops-practice
+PS C:\Users\USER\devops-practice> cd semana1-linux
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> echo "Inicio practica Linux" > comandos.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "ls" >> comandos.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "cd" >> comandos.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "mkdir" >> comandos.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "rm" >> comandos.txt
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> type comandos.txt
+Inicio practica Linux
+ls
+cd
+mkdir
+rm
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> mkdir pruebas
+Directorio: C:\Users\USER\devops-practice\semana1-linux
+PS C:\Users\USER\devops-practice\semana1-linux> cd pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> echo "archivo prueba" > archivo1.txt
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> echo "otro archivo" > archivo2.txt
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+Directorio: C:\Users\USER\devops-practice\semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> cd ..
+PS C:\Users\USER\devops-practice\semana1-linux> cd pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> rename archivo1.txt archivo_renombrado.txt
+rename : El término 'rename' no se reconoce como nombre de un cmdlet, función, archivo de script o programa
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta
+es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ rename archivo1.txt archivo_renombrado.txt
++ ~~~~~~
+: ObjectNotFound: (rename:String) [], CommandNotFoundException
++ FullyQualifiedErrorId : CommandNotFoundException
+Directorio: C:\Users\USER\devops-practice\semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> copy archivo2.txt copia.txt
+Directorio: C:\Users\USER\devops-practice\semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> del copia.txt
+Directorio: C:\Users\USER\devops-practice\semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas>
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> cd ..
+PS C:\Users\USER\devops-practice\semana1-linux> cd ..
+PS C:\Users\USER\devops-practice> cd semana1-linux
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> echo @echo off > script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> echo echo Ejecutando script DevOps >> script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> echo echo Proceso completado >> script.bat
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> script.bat
+script.bat : El término 'script.bat' no se reconoce como nombre de un cmdlet, función, archivo de script o programa
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta
+es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ script.bat
++ ~~~~~~~~~~
+: ObjectNotFound: (script.bat:String) [], CommandNotFoundException
++ FullyQualifiedErrorId : CommandNotFoundException
+Suggestion [3,General]: No se encontró el comando script.bat, pero existe en la ubicación actual. Windows PowerShell no carga comandos de la ubicación actual de forma predeterminada. Si confía en este comando, escriba ".\script.bat". Vea "get-help about_Command_Precedence" para obtener información más detallada.
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> cd ..
+PS C:\Users\USER\devops-practice> cd semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> Rename-Item archivo1.txt archivo_renombrado.txt
+Directorio: C:\Users\USER\devops-practice\semana1-linux\pruebas
+PS C:\Users\USER\devops-practice\semana1-linux\pruebas> cd ..
+PS C:\Users\USER\devops-practice\semana1-linux> .\script.bat
+C:\Users\USER\devops-practice\semana1-linux>■o
+"■o" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+PS C:\Users\USER\devops-practice\semana1-linux> .\script.bat
+C:\Users\USER\devops-practice\semana1-linux>■o
+"■o" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+PS C:\Users\USER\devops-practice\semana1-linux> del script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> echo @echo off > script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> echo echo Ejecutando script DevOps >> script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> echo echo Proceso completado >> script.bat
+PS C:\Users\USER\devops-practice\semana1-linux> type script.bat
+off
+echo
+Ejecutando
+script
+DevOps
+echo
+Proceso
+completado
+PS C:\Users\USER\devops-practice\semana1-linux> cd logs
+cd : No se encuentra la ruta de acceso 'C:\Users\USER\devops-practice\semana1-linux\logs' porque no existe.
+En línea: 1 Carácter: 1
++ cd logs
++ ~~~~~~~
+: ObjectNotFound: (C:\Users\USER\d...ana1-linux\logs:String) [Set-Location], ItemNotFoundE
+xception
++ FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> echo "Inicio de practica DevOps" > log.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "Creacion de archivos correcta" >> log.txt
+PS C:\Users\USER\devops-practice\semana1-linux> echo "Script ejecutado correctamente" >> log.txt
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> type log.txt
+Inicio de practica DevOps
+Creacion de archivos correcta
+Script ejecutado correctamente
+PS C:\Users\USER\devops-practice\semana1-linux>
+PS C:\Users\USER\devops-practice\semana1-linux> cd ..\logs
+PS C:\Users\USER\devops-practice\logs> cd logs
+cd : No se encuentra la ruta de acceso 'C:\Users\USER\devops-practice\logs\logs' porque no existe.
+En línea: 1 Carácter: 1
++ cd logs
++ ~~~~~~~
+: ObjectNotFound: (C:\Users\USER\devops-practice\logs\logs:String) [Set-Location], ItemNot
+FoundException
++ FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+PS C:\Users\USER\devops-practice\logs>
+PS C:\Users\USER\devops-practice\logs> echo "Inicio de practica DevOps" > log.txt
+PS C:\Users\USER\devops-practice\logs> echo "Creacion de archivos correcta" >> log.txt
+PS C:\Users\USER\devops-practice\logs> echo "Script ejecutado correctamente" >> log.txt
+PS C:\Users\USER\devops-practice\logs>
+PS C:\Users\USER\devops-practice\logs> type log.txt
+Inicio de practica DevOps
+Creacion de archivos correcta
+Script ejecutado correctamente
+PS C:\Users\USER\devops-practice\logs>
+PS C:\Users\USER\devops-practice\logs> cd ..
+PS C:\Users\USER\devops-practice> cd semana2-docker
+PS C:\Users\USER\devops-practice\semana2-docker>
+PS C:\Users\USER\devops-practice\semana2-docker> echo FROM ubuntu > Dockerfile
+PS C:\Users\USER\devops-practice\semana2-docker> echo RUN apt update >> Dockerfile
+PS C:\Users\USER\devops-practice\semana2-docker> echo RUN apt install -y curl >> Dockerfile
+PS C:\Users\USER\devops-practice\semana2-docker>
+PS C:\Users\USER\devops-practice\semana2-docker> type Dockerfile
+FROM
+ubuntu
+RUN
+apt
+update
+RUN
+apt
+install
+-y
+curl
+PS C:\Users\USER\devops-practice\semana2-docker>
+PS C:\Users\USER\devops-practice\semana2-docker> echo version: '3' > docker-compose.yml
+PS C:\Users\USER\devops-practice\semana2-docker> echo services: >> docker-compose.yml
+app: >> docker-compose.yml
+build: . >> docker-compose.yml
+PS C:\Users\USER\devops-practice\semana2-docker>
+PS C:\Users\USER\devops-practice\semana2-docker> type docker-compose.yml
+version:
+3
+services:
+app:
+build:
+.
+PS C:\Users\USER\devops-practice\semana2-docker>
+PS C:\Users\USER\devops-practice\semana2-docker> cd ..
+PS C:\Users\USER\devops-practice> cd semana3-cicd
+PS C:\Users\USER\devops-practice\semana3-cicd>
+PS C:\Users\USER\devops-practice\semana3-cicd> echo name: pipeline > workflow.yml
+PS C:\Users\USER\devops-practice\semana3-cicd> echo on: push >> workflow.yml
+PS C:\Users\USER\devops-practice\semana3-cicd> echo jobs: >> workflow.yml
+build: >> workflow.yml
+runs-on: ubuntu-latest >> workflow.yml
+steps: >> workflow.yml
+- name: test >> workflow.yml
+run: echo Hola CI/CD >> workflow.yml
+PS C:\Users\USER\devops-practice\semana3-cicd>
+PS C:\Users\USER\devops-practice\semana3-cicd> type workflow.yml
+name:
+pipeline
+on:
+push
+jobs:
+build:
+runs-on:
+ubuntu-latest
+steps:
+-
+name:
+test
+run:
+echo
+Hola
+CI/CD
+PS C:\Users\USER\devops-practice\semana3-cicd>
+PS C:\Users\USER\devops-practice\semana3-cicd> cd ..
