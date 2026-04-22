@@ -1,5 +1,3 @@
-
-
 const DEMO_USER = {id:1,name:'Carlos Mendoza',email:'alimentos@tradeflow.sv',company:'Alimentos Del Mar S.A.',ior_number:'SV-2021-00412',role:'importer'};
 localStorage.setItem('tf_token','demo-token');
 localStorage.setItem('tf_user',JSON.stringify(DEMO_USER));
@@ -216,9 +214,6 @@ function showSub(subId, btn) {
   if (subId === 'intel-alerts' && !document.getElementById('alerts-content').dataset.loaded) loadAlerts();
 }
 
-/* ════════════════════════════════════════
-   1. MI DASHBOARD
-════════════════════════════════════════ */
 async function loadMyDashboard() {
   const c = document.getElementById('mi-dash-content');
   const user = getUser();
@@ -301,9 +296,6 @@ async function loadMyDashboard() {
   </div>`;
 }
 
-/* ════════════════════════════════════════
-   2. MIS ENVIOS
-════════════════════════════════════════ */
 let myShipments = [];
 
 async function loadMisEnvios() {
@@ -536,9 +528,6 @@ async function submitShipment(e) {
   else toast(data.msg||'Error.','err');
 }
 
-/* ════════════════════════════════════════
-   3. MI HISTORIAL FDA
-════════════════════════════════════════ */
 async function loadMyFDA() {
   const c = document.getElementById('mi-fda-content');
   const user = getUser();
@@ -609,9 +598,6 @@ async function loadMyFDA() {
   </div>`;
 }
 
-/* ════════════════════════════════════════
-   4. INTELIGENCIA DE MERCADO
-════════════════════════════════════════ */
 function loadInteligencia() {
   if (!document.getElementById('dash-content').dataset.loaded) loadIntelDash();
 }
@@ -722,9 +708,6 @@ async function loadAlerts() {
     </div>`).join('')}`;
 }
 
-/* ════════════════════════════════════════
-   5. REFERENCIA
-════════════════════════════════════════ */
 let allCodes = [], codeFilter = 'all';
 async function loadReferencia() {
   if (allCodes.length) return;
@@ -755,10 +738,6 @@ function setCodeFilter(btn, f) {
   btn.classList.add('active');
   filterCodes();
 }
-
-/* ════════════════════════════════════════
-   PERFIL
-════════════════════════════════════════ */
 async function loadPerfil() {
   const c = document.getElementById('perfil-content');
   const data = await API.me();
@@ -807,12 +786,7 @@ async function changePassword(e) {
   if (data.ok) { toast('Contraseña actualizada.'); e.target.reset(); } else toast(data.msg,'err');
 }
 
-/* ── INIT ── */
 document.addEventListener('DOMContentLoaded', () => showPage('mi-dashboard'));
-
-/* ════════════════════════════════════════
-   TRACKING DE NAVIERAS
-════════════════════════════════════════ */
 async function loadShipmentTracking(shipmentId, btn) {
   const panel = document.getElementById('track-panel-' + shipmentId);
   if (!panel) return;
@@ -868,11 +842,6 @@ function detectContainerCarrier(value) {
   if (carrier) { hint.style.color = 'var(--green)'; hint.textContent = '\u2713 Naviera detectada: ' + carrier; }
   else if (value.length >= 4) { hint.style.color = 'var(--ink3)'; hint.textContent = 'Naviera: no identificada por prefijo'; }
 }
-
-/* ════════════════════════════════════════
-   ITACS — ESTADO FDA
-════════════════════════════════════════ */
-
 // Abre ITACS en ventana nueva con el entry number ya escrito
 function abrirITACS(entryNumber, shipmentId) {
   // URL de ITACS con el entry number precargado
@@ -916,10 +885,6 @@ function resetITACSCaptcha(shipmentId) {
   const div = document.getElementById('itacs-opciones-' + shipmentId);
   if (div) div.style.display = 'none';
 }
-
-/* ════════════════════════════════════════
-   TRACKING DE NAVIERAS
-════════════════════════════════════════ */
 async function loadShipmentTracking(shipmentId, btn) {
   const panel = document.getElementById('track-panel-' + shipmentId);
   if (!panel) return;
