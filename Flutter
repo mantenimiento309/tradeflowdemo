@@ -1,1 +1,30 @@
 Revisar carpeta Flutter A. Demos estudiar flutter Backend y frontend
+
+https://medium.com/@Code-blast/how-to-upload-your-flutter-project-to-github-106bd51e14fd
+
+Steps on how to upload Flutter projects to GitHub
+Step 1. Go on GitHub and create a brand new repository.
+
+
+Step 2. Give your repository a name and make sure pubic is checked then click on Create a new repository
+
+Press enter or click to view image in full size
+
+Note: Make sure you have Git already installed on your device. if you haven’t head over to https://git-scm.com/ to get that done
+
+
+Step 4. Move back to your code editor(visual studio code or android studio) toggle over to the terminal and enter the following commands in your project folder.
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://The link to your git repo
+git push -u origin main
+Press enter or click to view image in full size
+
+Step 5. After doing all this head over to your GitHub and refresh the page you should have something like this.
+
+
+
+After following these few simple steps you have successfully uploaded your flutter project to GitHub.
